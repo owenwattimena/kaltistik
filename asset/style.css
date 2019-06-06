@@ -1,0 +1,54 @@
+
+/* my Costum */
+html, body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+}
+
+.font-primary-dark{
+    color: #48813A;
+}
+.btn-primary{
+    background-color: #BFE72C;
+    border: 2px solid #95C01E;
+}
+
+.btn-primary:hover{
+    background-color: #95C01E;
+    border: 2px solid #BFE72C;
+}
+/* end of my Costum */
+
+/* index CSS */
+.landing{
+    height: 100%;
+}
+.landing img{
+    width: 200px;
+}
+
+.landing h1{
+    font-family: 'Bauhaus 93', Courier, monospace;
+}
+.landing .description{
+    font-family: 'centaur', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.landing .btn{
+    border-radius: 100px;
+}
+
+/* responsive panding img */
+@media only screen and (min-width:300px){
+    .landing img{
+        width: 350px;
+    }
+}
+@media only screen and (min-width:600px){
+    .landing img{
+        width: 500px;
+    }
+}
+/* end of responsive panding img */
+
+/* end of index CSS */
