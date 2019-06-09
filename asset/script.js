@@ -1,11 +1,10 @@
-$(document).ready(function () {
-});
+let $tinggi_awal = $('.content').height();
 $("#show-menu").click(function () {
     $(".side-nav").toggleClass('open');
     // $(".content").toggleClass('menu-open');
     // $('.body .content').css('overflow', 'hidden');
     let $tinggi_content = $('.content').height();
-    if ($tinggi_content > 900) {
+    if ($tinggi_content > $tinggi_awal) {
         $('.side-nav').css('min-height', $tinggi_content);
     }
     else {

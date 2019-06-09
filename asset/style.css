@@ -97,7 +97,13 @@ body {
 .side-nav-header {
     background-color: #F0F1F1;
     /* border: 1px solid red; */
-
+}
+.side-nav-header a{
+    text-decoration: none;
+    color: #48813A;
+}
+.side-nav-header a:hover{
+    color: #95C01E;
 }
 
 .side-nav-header button {
@@ -143,6 +149,10 @@ body {
 .side-nav-content {
     background-color: #95C01E;
     height: auto;
+}
+
+.side-nav-content p, .side-nav-content .separator{
+    display: none;
 }
 
 .side-nav-content .separator {
