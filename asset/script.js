@@ -10,3 +10,8 @@ $("#hide-menu").click(function () {
     $(".content").toggleClass('menu-open');
     // $('.body .content').css('overflow', 'hidden');
 })
+
+
+// MathJax.Hub.Config({
+//     tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+// });

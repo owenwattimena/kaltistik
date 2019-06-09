@@ -295,6 +295,7 @@ body {
     cursor: pointer;
 }
 
+
 @media only screen and (min-width: 768px) {
     .jawaban-benar-distribusi-frekuensi .row .card {
         height: 462px;
