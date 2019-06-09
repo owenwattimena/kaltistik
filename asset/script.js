@@ -2,16 +2,16 @@ $(document).ready(function () {
 });
 $("#show-menu").click(function () {
     $(".side-nav").toggleClass('open');
-    $(".content").toggleClass('menu-open');
+    // $(".content").toggleClass('menu-open');
     // $('.body .content').css('overflow', 'hidden');
+    let $tinggi_content = $('.content').height();
+    if ($tinggi_content > 900) {
+        $('.side-nav').css('min-height', $tinggi_content);
+    }
+    else {
+        $('.side-nav').css('min-height', '100%');
+    }
 })
 $("#hide-menu").click(function () {
     $(".side-nav").toggleClass('open');
-    $(".content").toggleClass('menu-open');
-    // $('.body .content').css('overflow', 'hidden');
 })
-
-
-// MathJax.Hub.Config({
-//     tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
-// });

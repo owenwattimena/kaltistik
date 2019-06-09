@@ -80,7 +80,7 @@ body {
 .body{
     position: relative;
     width: 100%;
-    height: auto;
+    min-height: 100%!important;
 }
 
 /* side-nav */
@@ -89,7 +89,7 @@ body {
     position: absolute;
     background-color: #95C01E;
     transform: translateX(-100%);
-    height: auto!important;
+    min-height: 100%;
     transition: 1s;
     z-index: 1000;
 }
@@ -228,9 +228,6 @@ body {
 
 .open {
     transform: translateX(0);
-}
-.menu-open{
-    display: none;
 }
 
 
