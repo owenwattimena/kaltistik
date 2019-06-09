@@ -44,10 +44,10 @@
                     <a href="penyajian-tabel-distribusi-frekuensi.html" class="list-group-item list-group-item-action">
                         Penyajian Tabel Distribusi Frekuensi
                     </a>
-                    <a href="median.html" class="list-group-item list-group-item-action active">
+                    <a href="median.html" class="list-group-item list-group-item-action">
                         Median
                     </a>
-                    <a href="modus.html" class="list-group-item list-group-item-action">
+                    <a href="modus.html" class="list-group-item list-group-item-action active">
                         Modus
                     </a>
                 </div>
@@ -59,7 +59,7 @@
                     <span class="top-nav-toggler-icon"></span>
                 </button>
                 <!-- title -->
-                <h3 class="font-primary">Median</h3>
+                <h3 class="font-primary">Modus</h3>
             </div>
 
             <div class="container p-3">
@@ -95,72 +95,20 @@
                                             <div class="alert alert-tak-berkelompok alert-danger d-none" role="alert">
                                             </div>
                                             <div class="jawaban-benar-tak-berkelompok text-center d-none">
-                                                <div class="card card-data mb-3">
-                                                    <div class="card-header">
-                                                        Data
-                                                    </div>
-                                                    <div class="card-body text-left data-distribusi-f">
-                                                        <span class="data"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="ganjil">
-                                                    <span>Data ganjil</span>
-                                                    <p class="border border-primary p-2">
-                                                        Median = X<sub>K+1</sub>
-                                                    </p>
-                                                    <p>
-                                                        K = (n-1)/2
-                                                    </p>
-                                                    <p>
-                                                        K = (<span class="n">0</span>-1)/2
-                                                    </p>
-                                                    <p class="font-weight-bold">
-                                                        K = <span class="K">0</span>
-                                                    </p>
-                                                    <p>
-                                                        Median = X<sub><span class="K">0</span>+1</sub>
-                                                    </p>
-                                                    <p class="font-weight-bold">
-                                                        Med = X<sub><span class="med">0</span></sub> = <span
-                                                            class="MED">0</span>
-                                                    </p>
-                                                </div>
-                                                <div class="genap">
-                                                    <span>Data genap</span>
-                                                    <p class="border border-primary p-2">
-                                                        Median = 1/2 (X<sub>K</sub> + X<sub>K+1</sub>)
-                                                    </p>
-                                                    <p>
-                                                        K = n/2
-                                                    </p>
-                                                    <p>
-                                                        K = <span class="n">0</span>/2
-                                                    </p>
-                                                    <p class="font-weight-bold">
-                                                        K = <span class="K">0</span>
-                                                    </p>
-                                                    <p>
-                                                        Median = 1/2 (X<span class="K"><sub>0</sub></span> + X<sub><span
-                                                                class="K">0</span>+1</sub>)
-                                                    </p>
-                                                    <p>
-                                                        1/2 (X<sub><span class="K">0</span></sub> + X<sub><span
-                                                                class="K">0</span>+1</sub>)
-                                                    </p>
-                                                    <p>
-                                                        1/2 (X<sub><span class="K">0</span></sub> + X<sub><span
-                                                                class="Kplus1">0</span></sub>)
-                                                    </p>
-                                                    <p>
-                                                        1/2 (<span class="XK">0</span> + <span class="XKplus1">0</span>)
-                                                    </p>
-                                                    <p>
-                                                        1/2 (<span class="XKKplus1">0</span>)
-                                                    </p>
-                                                    <p class="font-weight-bold">
-                                                        Med = <span class="MED">0</span>
-                                                    </p>
-                                                </div>
+                                                <table class="table tabel-tak-berkelompok table-bordered text-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">X</th>
+                                                            <th scope="col" class="align-middle">f</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="d-none">
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -182,10 +130,11 @@
                                     </h5>
                                 </div>
 
+                                <!-- data berkelompok -->
                                 <div id="dataBerkelompok" class="collapse" aria-labelledby="headingOne"
                                     data-parent="#accordionExample">
                                     <div class="card-body">
-                                        <table class="table table-bordered text-center">
+                                        <table class="table tabel-berkelompok table-bordered text-center">
                                             <thead>
                                                 <tr>
                                                     <th scope="col" colspan="2">X</th>
@@ -227,20 +176,12 @@
                                             <div class="alert alert-berkelompok alert-danger d-none" role="alert"></div>
                                             <div class="jawaban-benar-berkelompok text-center d-none">
                                                 <p class="border border-primary p-2">
-                                                    Median = L<sub>0</sub> + C ((n/2 - (&Sigma;fi)<sub>0</sub>) / fm)
-                                                </p>
-                                                <p>
-                                                    n = <span class="n">40</span>;
-                                                </p>
-                                                <p>
-                                                    n/2 = <span class="n">40</span>/2 = <span class="K">K</span>
+                                                    Mod = L<sub>0</sub> + C ((f<sub>1</sub>)<sub>0</sub>) /
+                                                    (f<sub>1</sub>)<sub>0</sub> + (f<sub>2</sub>)<sub>0</sub>)
                                                 </p>
                                                 <p>
                                                     L<sub>0</sub> = <span class="batas_bawah">BB</span> - 0.5 = <span
                                                         class="L_nol">L0</span>
-                                                </p>
-                                                <p>
-                                                    (&Sigma;fi)<sub>0</sub> = <span class="sigmaFi_nol">0</span>
                                                 </p>
                                                 <p>
                                                     C = <span class="tepi_atas_kelas">TAK</span> - <span
@@ -248,36 +189,37 @@
                                                     <span class="C">C</span>
                                                 </p>
                                                 <p>
-                                                    fm = <span class="fm">fm</span>
+                                                    (f<sub>1</sub>)<sub>0</sub> = <span class="f_mod">fm</span> - <span
+                                                        class="fi_bawah_mod">0</span> = <span
+                                                        class="f_satu_nol">F10</span>
+                                                </p>
+                                                <p>
+                                                    (f<sub>2</sub>)<sub>0</sub> = <span class="f_mod">fm</span> - <span
+                                                        class="fi_atas_mod">0</span> = <span
+                                                        class="f_dua_nol">F20</span>
                                                 </p>
 
                                                 <p>
-                                                    Median = <span class="L_nol">L0</span> + <span class="C">C</span>
-                                                    ((<span class="n">n</span>/2) - <span
-                                                        class="sigmaFi_nol">SigFi_0</span> ) / <span
-                                                        class="fm">Fm</span>)
+                                                    Mod = <span class="L_nol">l0</span> + <span class="C">C</span>
+                                                    (<span class="f_satu_nol">f10</span> /
+                                                    (<span class="f_satu_nol">f10</span> + <span
+                                                        class="f_dua_nol">f20</span>)
                                                 </p>
                                                 <p>
-                                                    <span class="L_nol">L0</span> + <span class="C">C</span> ((<span
-                                                        class="K">K</span> - <span class="sigmaFi_nol">0</span>)/ <span
-                                                        class="fm">fm</span> )
+                                                    <span class="L_nol">l0</span> + <span class="C">C</span> (<span
+                                                        class="f_satu_nol">f10</span> /
+                                                    <span class="f_satu_dua_nol">f120</span>)
                                                 </p>
                                                 <p>
-                                                    <span class="L_nol">L0</span> + <span class="C">C</span> (<span
-                                                        class="KsigmaFi_nol">KsigmaFi0</span>/ <span
-                                                        class="fm">fm</span> )
+                                                    <span class="L_nol">l0</span> + <span class="C">C</span>
+                                                    (<span class="f_satu_nol_per_f_satu_dua_nol">f1/f120</span>)
                                                 </p>
                                                 <p>
-                                                    <span class="L_nol">L0</span> + (<span
-                                                        class="CKsigmaFi_nol">CKsigmaFi0</span>/ <span
-                                                        class="fm">fm</span> )
-                                                </p>
-                                                <p>
-                                                    <span class="L_nol">L0</span> + <span
-                                                        class="CKsigmaFi_nolFm">CKsigmaFi0</span>
+                                                    <span class="L_nol">l0</span> + <span
+                                                        class="C_f_satu_nol_per_f_satu_dua_nol">Cf1/f120</span>
                                                 </p>
                                                 <p class="font-weight-bold">
-                                                    Median = <span class="MED">Med</span>
+                                                    Modus = <span class="MOD">Mod</span>
                                                 </p>
                                             </div>
                                         </div>
@@ -312,17 +254,16 @@
             */
 
             // aksi data tak berkelompok
-            // let $number = /^[0-9.]+$/;
-
             $('.btn-tak-berkelompok').click(function () {
+                $('.tabel-tak-berkelompok .tr').remove();
                 $('.jawaban-tak-berkelompok').removeClass('d-none');
-                let $data = $('.input-data').val();
+                let $data = $('.input-data').val(); //mengambil data inputan
                 $data = $data.trim();
 
                 if (!is_data($data)) {
                     $('.jawaban-benar-tak-berkelompok').addClass('d-none');
                     $('.alert-tak-berkelompok').removeClass('d-none');
-                    $('.alert-tak-berkelompok').text('Mohon masukan data!!!')
+                    $('.alert-tak-berkelompok').text('Mohon masukan data!!!');
                     return;
                 }
                 $data = explode($data, ',');
@@ -333,7 +274,6 @@
                     $('.alert-tak-berkelompok').text('Harap masukan lebih dari satu data!!!');
                     return;
                 }
-
                 let $data_valid = data_valid($data);
                 if ($data_valid['error']) {
                     $('.jawaban-benar-tak-berkelompok').addClass('d-none');
@@ -342,43 +282,45 @@
                     return;
                 }
                 $data = $data.sort(function (a, b) { return a - b });
-                $('.data').text($data);
-
-
-                if ($banyak_data % 2 != 0) {
-                    // ganjil
-                    let $K = ($banyak_data - 1) / 2;
-                    let $med = $K + 1;
-                    let $MED = $med - 1;
-                    $('.ganjil .n').text($banyak_data);
-                    $('.ganjil .K').text($K);
-                    $('.ganjil .med').text($med);
-                    $('.ganjil .MED').text($data[$MED]);
-                    $('.ganjil').removeClass('d-none');
-                    $('.genap').addClass('d-none');
+                let $data_x_tersaring = new Array();
+                let $data_f_tersaring = new Array();
+                for (let i = 0; i < $banyak_data; i++) {
+                    if ($data_x_tersaring.indexOf($data[i]) === -1) {
+                        let $index = $data_x_tersaring.length;
+                        let $frek_i = 0;
+                        for (let j = 0; j < $banyak_data; j++) {
+                            if ($data[i] == $data[j]) {
+                                $frek_i++;
+                            }
+                        }
+                        $data_x_tersaring[$index] = $data[i];
+                        $data_f_tersaring[$index] = $frek_i;
+                    }
                 }
-                else {
-                    // genap
-                    let $K = $banyak_data / 2;
-                    let $XKKplus1 = parseFloat($data[$K - 1]) + parseFloat($data[$K]);
-                    let $MED = $XKKplus1 / 2;
-                    $('.genap .n').text($banyak_data);
-                    $('.genap .K').text($K);
-                    $('.genap .Kplus1').text(($K + 1));
-                    $('.genap .XK').text($data[$K - 1]);
-                    $('.genap .XKplus1').text($data[$K]);
-                    $('.genap .XKKplus1').text($XKKplus1);
-                    $('.genap .MED').text($MED);
-                    $('.genap').removeClass('d-none');
-                    $('.ganjil').addClass('d-none');
+
+                let $mod = Math.max.apply(Math, $data_f_tersaring);
+
+                for (let i = 0; i < $data_x_tersaring.length; i++) {
+                    tambah_baris($('.tabel-tak-berkelompok'));
                 }
+
+                $('.tabel-tak-berkelompok').find('.tr').each(function (i, e) {
+                    let $td = $(this).find('td');
+                    $td.eq(0).text($data_x_tersaring[i]); //data X 
+                    $td.eq(1).text($data_f_tersaring[i]); //data f
+                    if ($data_f_tersaring[i] == $mod) {
+                        $(this).addClass('alert-success')
+                    }
+                });
+
                 $('.jawaban-benar-tak-berkelompok').removeClass('d-none');
                 $('.alert-tak-berkelompok').addClass('d-none');
+
             });
 
             // tambah baris
             $('.btn-add-row').click(function () {
-                tambah_baris($('.table'));
+                tambah_baris($('.tabel-berkelompok'));
             });
 
             // hapus baris
@@ -387,12 +329,12 @@
                 hapus_baris(tr);
             });
 
+
+
             // aksi data berkelompok
 
             $('.btn-berkelompok').click(function () {
-
                 $('.jawaban-berkelompok').removeClass('d-none');
-
 
                 $('.tr').removeClass('alert-success');
                 // cek kelayakan data dan ambil data frekuensi
@@ -401,7 +343,8 @@
                 let $bool_baris = false;
                 let $bool_angka = true;
 
-                $('.table').find('tbody .tr').each(function (i, e) {
+
+                $('.tabel-berkelompok').find('tbody .tr').each(function (i, e) {
                     $bool_baris = true;
                     let $td = $(this).find('td');
                     let $batas_bawah = $td.eq(0).text();
@@ -429,6 +372,8 @@
                 });
 
 
+
+
                 if (!$bool_baris) {
                     $('.jawaban-benar-berkelompok').addClass('d-none');
                     $('.alert-berkelompok').removeClass('d-none');
@@ -449,68 +394,98 @@
                 }
 
 
-                let $K = $n / 2; //nilai K
-                let $indexFm = 0; //nilai index row dari kelas yang ada mediannya 
-                let $sig_fi_nol = $f[0];
-                for (let i = 0; i < $f.length; i++) {
-                    if ($sig_fi_nol >= $K) {
-                        $indexFm = i;
-                        $sig_fi_nol = $sig_fi_nol - $f[i];
-                        break;
+                // let $indexFm = 0; //nilai index row dari kelas yang ada mediannya 
+                // let $sig_fi_nol = $f[0];
+                // for (let i = 0; i < $f.length; i++) {
+                //     if ($sig_fi_nol >= $K) {
+                //         $indexFm = i;
+                //         $sig_fi_nol = $sig_fi_nol - $f[i];
+                //         break;
+                //     }
+                //     else {
+                //         $sig_fi_nol = $sig_fi_nol + $f[i + 1];
+                //     }
+                // }
+
+                let $f_modus = Math.max.apply(Math, $f);
+                let $index_f_modus = $f.indexOf($f_modus);
+                let $frekuensi_i_bawah_mod = 0, $frekuensi_i_atas_mod = 0, $batas_bawah_mod = 0, $batas_atas_mod = 0;
+
+                $('.tabel-berkelompok').find('tbody .tr').each(function (i) {
+                    let $td = $(this).find('td');
+                    if ($index_f_modus - 1 == i) {
+                        $frekuensi_i_bawah_mod = parseFloat($td.eq(2).text());
                     }
-                    else {
-                        $sig_fi_nol = $sig_fi_nol + $f[i + 1];
-                    }
-                }
-
-
-                let $batas_bawah;
-                let $batas_atas
-                // let $tepi_bawah_kelas = 0;
-                // let $tepi_atas_kelas = 0;
-                let $fm = 0; //Frekuensi yang ada mediannnya
-                $('.table').find('tbody .tr').each(function (i, e) {
-                    if (i == $indexFm) {
-                        let $td = $(this).find('td');
-                        $batas_bawah = $td.eq(0).text();
-                        $batas_atas = $td.eq(1).text();
-                        let $frekuensi_i = $td.eq(2).text();
-
-                        $batas_bawah = parseFloat($batas_bawah.trim());
-                        $batas_atas = parseFloat($batas_atas.trim());
-                        $frekuensi_i = parseFloat($frekuensi_i.trim());
-                        $fm = $frekuensi_i;
+                    if ($index_f_modus == i) {
+                        $batas_bawah_mod = parseFloat($td.eq(0).text());
+                        $batas_atas_mod = parseFloat($td.eq(1).text());
                         $(this).addClass('alert-success');
                     }
+                    if ($index_f_modus + 1 == i) {
+                        $frekuensi_i_atas_mod = parseFloat($td.eq(2).text());
+                    }
                 });
+                // console.log($frekuensi_i_atas_mod);
+                // return;
 
-                let $L_nol = $batas_bawah - 0.5;
+                // let $batas_bawah;
+                // let $batas_atas
+                // // let $tepi_bawah_kelas = 0;
+                // // let $tepi_atas_kelas = 0;
+                // let $fm = 0; //Frekuensi yang ada mediannnya
+                // $('.table').find('tbody .tr').each(function (i, e) {
+                //     if (i == $indexFm) {
+                //         let $td = $(this).find('td');
+                //         $batas_bawah = $td.eq(0).text();
+                //         $batas_atas = $td.eq(1).text();
+                //         let $frekuensi_i = $td.eq(2).text();
+
+                //         $batas_bawah = parseFloat($batas_bawah.trim());
+                //         $batas_atas = parseFloat($batas_atas.trim());
+                //         $frekuensi_i = parseFloat($frekuensi_i.trim());
+                //         $fm = $frekuensi_i;
+                //         $(this).addClass('alert-success');
+                //     }
+                // });
+
+                let $L_nol = $batas_bawah_mod - 0.5;
                 let $tepi_bawah_kelas = $L_nol;
-                let $tepi_atas_kelas = $batas_atas + 0.5;
+                let $tepi_atas_kelas = $batas_atas_mod + 0.5;
                 let $C = $tepi_atas_kelas - $tepi_bawah_kelas; //nilai C
-                let $KsigmaFi_nol = $K - $sig_fi_nol; // nilai dari K - (Sigma fi)0
-                let $CKsigmaFi_nol = $C * $KsigmaFi_nol; // nilai dari C * (K - (Sigma fi)0)
-                let $CKsigmaFi_nolFm = $CKsigmaFi_nol / $fm; // nilai dari (C * (K - (Sigma fi)0)) / fm
-                let $MED = $L_nol + $CKsigmaFi_nolFm; //nilai dari L0 - ((C * (K - (Sigma fi)0)) / fm)
+                let $f_satu_nol = $f_modus - $frekuensi_i_bawah_mod;
+                let $f_dua_nol = $f_modus - $frekuensi_i_atas_mod;
+                let $f_satu_dua_nol = $f_satu_nol + $f_dua_nol;
+                let $f_satu_nol_per_f_satu_dua_nol = $f_satu_nol / $f_satu_dua_nol;
+                let $C_f_satu_nol_per_f_satu_dua_nol = $C * $f_satu_nol_per_f_satu_dua_nol;
+                let $MOD = $L_nol + $C_f_satu_nol_per_f_satu_dua_nol; //nilai dari L0 - ((C * (f10 / (f1o+f20)
 
-                $('.n').text($n);
-                $('.K').text($K);
-                $('.batas_bawah').text($batas_bawah);
+                $('.batas_bawah').text($batas_bawah_mod);
                 $('.L_nol').text($L_nol);
-                $('.sigmaFi_nol').text($sig_fi_nol);
                 $('.tepi_atas_kelas').text($tepi_atas_kelas);
                 $('.tepi_bawah_kelas').text($tepi_bawah_kelas);
                 $('.C').text($C);
-                $('.fm').text($fm);
-                $('.KsigmaFi_nol').text($KsigmaFi_nol);
-                $('.CKsigmaFi_nol').text($CKsigmaFi_nol);
-                $('.CKsigmaFi_nolFm').text($CKsigmaFi_nolFm);
-                $('.MED').text($MED);
+                $('.f_mod').text($f_modus);
+                $('.fi_bawah_mod').text($frekuensi_i_bawah_mod);
+                $('.fi_atas_mod').text($frekuensi_i_atas_mod);
+                $('.f_satu_nol').text($f_satu_nol);
+                $('.f_dua_nol').text($f_dua_nol);
+                $('.f_satu_dua_nol').text($f_satu_dua_nol);
+                $('.f_satu_nol_per_f_satu_dua_nol').text($f_satu_nol_per_f_satu_dua_nol);
+                $('.C_f_satu_nol_per_f_satu_dua_nol').text($C_f_satu_nol_per_f_satu_dua_nol);
+                $('.MOD').text($MOD);
 
                 $('.jawaban-benar-berkelompok').removeClass('d-none');
                 $('.alert-berkelompok').addClass('d-none');
 
             });
+            // let array = [
+            //     [
+            //         1, 2
+            //     ],
+            //     [
+            //         3, 4
+            //     ]
+            // ];
 
             /*
             *Math.max.apply(Math,a);
@@ -522,6 +497,8 @@
 
 
 <!-- 
+    1,2,2,3,3,3,4,4,4,4,5,5,5,5,5
+    
     80,66,74,70,71,74,71,73,72,75,71,70,74,79,76,67,66,69,74,75,72,75,72,72,78,74,72,74,80,74,77,75,73,73,73,79,78,74,70,68
     
     
