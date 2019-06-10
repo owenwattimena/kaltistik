@@ -53,6 +53,11 @@ body {
     border-radius: 100px;
 }
 
+.landing footer{
+    color: #48813A;
+    font-weight: bold;
+}
+
 
 /* responsive panding img */
 
@@ -182,7 +187,7 @@ body {
 .content {
     position: absolute;
     width: 100%;
-    height: auto;
+    min-height: 100%;
     top: 0;
     /* transition:1s;  */
 }
@@ -233,6 +238,25 @@ body {
 
 /* end of top-nav */
 
+/* accordion */
+.body .accordion .card-header .btn{
+    color: #6C6D70;
+    text-decoration: none;
+    transition: 1s;
+}
+.body .accordion .card-header .btn:hover{
+    color: rgb(43, 43, 44);
+    font-size: 12.5pt;
+}
+/* accordion */
+
+/* footer */
+.body footer{
+    margin-top: 15px;
+    color: #48813A;
+    font-weight: bold
+}
+/* end of footer */
 
 /* end of content */
 
