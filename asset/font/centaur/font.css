@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'CENTAUR';
+	src: url('./CENTAUR.eot');
+	src: local('CENTAUR'), url('./CENTAUR.woff') format('woff'), url('./CENTAUR.ttf') format('truetype');
+}
+/* use this class to attach this font to any element i.e. <p class="fontsforweb_fontid_21667">Text with this font applied</p> */
+.fontsforweb_fontid_21667 {
+	font-family: 'CENTAUR' !important;
+}
+
+/* Font downloaded from FontsForWeb.com */

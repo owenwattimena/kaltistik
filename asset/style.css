@@ -1,3 +1,24 @@
+@font-face {
+    font-family: SegoeUI;
+    src:
+        local("Segoe UI"),
+        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+	font-family: 'BAUHS93';
+	src: url('font/BAUHS93.eot');
+	src: local('BAUHS93'), url('font/BAUHS93.woff') format('woff'), url('font/BAUHS93.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'CENTAUR';
+	src: url('font/centaur/CENTAUR.eot');
+	src: local('CENTAUR'), url('font/centaur/CENTAUR.woff') format('woff'), url('font/centaur/CENTAUR.ttf') format('truetype');
+}
+
+
 /* my Costum */
 
 html,
@@ -42,11 +63,11 @@ body {
 
 .landing h1,
 .side-nav-header h3 {
-    font-family: 'Bauhaus 93', Courier, monospace;
+    font-family: 'BAUHS93', Courier, monospace;
 }
 
 .landing .description {
-    font-family: 'centaur', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'CENTAUR', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .landing .btn {
