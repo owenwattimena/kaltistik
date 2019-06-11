@@ -14,7 +14,7 @@ $("#show-menu").click(function () {
 $("#hide-menu").click(function () {
     $(".side-nav").toggleClass('open');
 })
-document.cookie = $('footer p').text();
-let $cookie = document.cookie;
-console.log($cookie);
+// document.cookie = $('footer p').text();
+// let $cookie = document.cookie;
+// console.log($cookie);
 

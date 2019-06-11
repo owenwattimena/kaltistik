@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="asset/bootstrap_4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="asset/fontawesome-free-5.7.1-web/css/all.css">
+
+    <title>Aplikasi Statistik | Owen Wattimena</title>
+
+</head>
+
+<body>
+    <div class="body">
+        <div class="side-nav text-center">
+
+            <div class="side-nav-header py-4">
+                <button id="hide-menu">
+                    <span class="side-nav-toggler-icon"></span>
+                </button>
+                <img src="asset/img/statistik.png">
+                <h3 class="mt-3 font-primary-dark"><a href="index.html">Statistik</a></h3>
+            </div>
+            <div class="side-nav-content pt-3 text-light">
+
+                <p>Materi</p>
+                <div class="separator"></div>
+
+                <div class="list-group">
+
+                    <a href="rata-rata-hitung.html" class="list-group-item list-group-item-action ">
+                        Rata-rata Hitung
+                    </a>
+                    <a href="penyajian-tabel-distribusi-frekuensi.html" class="list-group-item list-group-item-action">
+                        Penyajian Tabel Distribusi Frekuensi
+                    </a>
+                    <a href="median.html" class="list-group-item list-group-item-action">
+                        Median
+                    </a>
+                    <a href="modus.html" class="list-group-item list-group-item-action">
+                        Modus
+                    </a>
+                    <a href="disversi.html" class="list-group-item list-group-item-action active">
+                        Disversi
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="top-nav px-2">
+                <button id="show-menu">
+                    <span class="top-nav-toggler-icon"></span>
+                </button>
+                <!-- title -->
+                <h3 class="font-primary">Disversi</h3>
+            </div>
+
+            <div class="container p-3">
+                <!-- <h1>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</h1> -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Data Tidak Berkelompok
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Masukan Data</label>
+                                                <textarea class="form-control input-data"
+                                                    id="exampleFormControlTextarea1" rows="5"
+                                                    placeholder="Contoh: 1,2,3,4,5.6 (tanpa spasi)"></textarea>
+                                            </div>
+                                        </form>
+                                        <button class="btn btn-primary btn-tak-berkelompok">Hasil</button>
+                                        <div class="jawaban-tak-berkelompok d-none">
+                                            <hr>
+                                            <div class="alert alert-tak-berkelompok alert-danger d-none" role="alert">
+                                            </div>
+                                            <div class="jawaban-benar-tak-berkelompok text-center d-none">
+                                                <div class="card card-data mb-3">
+                                                    <div class="card-header">
+                                                        Data
+                                                    </div>
+                                                    <div class="card-body text-left data-distribusi-f">
+                                                        <span class="data"></span>
+                                                    </div>
+                                                </div>
+                                                <span>Nilai Jarak</span>
+                                                <p class="border border-primary p-2">
+                                                    NJ = X<sub>n</sub> - X<sub>1</sub>
+                                                </p>
+                                                <p>
+                                                    NJ = <span class="Xn">Xn</span> - <span class="x_satu">X1</span>
+                                                </p>
+                                                <p class="font-weight-bold">
+                                                    NJ = <span class="NJ">NJ</span>
+                                                </p>
+                                                <span>Rata-rata Simpangan</span>
+                                                <p class="border border-primary p-2">
+                                                    RS = 1/n (&Sigma; |X<sub>i</sub> - x&#772;|)
+                                                </p>
+                                                <p>
+                                                    RS = 1 / <span class="n">n</span> ( <span
+                                                        class="X-i-min-X-bar">XiXbar</span> )
+                                                </p>
+                                                <p>
+                                                    1 / <span class="n">n</span> ( <span
+                                                        class="Xi-min-Xbar">XiXbar</span> )
+                                                </p>
+                                                <p class="font-weight-bold">
+                                                    RS = <span class="RS">RS</span>
+                                                </p>
+                                                <span>Simpangan terhadap Median</span>
+                                                <p class="border border-primary p-2">
+                                                    RS = 1/n (&Sigma; |X<sub>i</sub> - Med|)
+                                                </p>
+                                                <p>
+                                                    RS = 1 / <span class="n">n</span> ( <span
+                                                        class="X-i-min-Med">XiMed</span> )
+                                                </p>
+                                                <p>
+                                                    1 / <span class="n">n</span> ( <span class="Xi-min-Med">XiMed</span>
+                                                    )
+                                                </p>
+                                                <p class="font-weight-bold">
+                                                    RS = <span class="RS-Med">RS</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#berkelompok" aria-expanded="true" aria-controls="berkelompok">
+                                            Data Tidak Berkelompok
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="berkelompok" class="collapse" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <table class="table table-bordered text-center">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" colspan="2">X</th>
+                                                    <th scope="col" rowspan="2" class="align-middle">f</th>
+                                                    <th scope="col" rowspan="2" class="align-middle">
+                                                        <button class="btn btn-success btn-sm btn-add-row">
+                                                            <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>BB</th>
+                                                    <th>BA</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="tr">
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td>
+                                                        <i class="fa fa-times-circle x-row"></i>
+                                                    </td>
+                                                </tr>
+
+                                                <tr class="d-none">
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td contenteditable="true"></td>
+                                                    <td>
+                                                        <i class="fa fa-times-circle x-row"></i>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <button class="btn btn-primary btn-berkelompok">Hasil</button>
+                                        <div class="jawaban-berkelompok d-none">
+                                            <hr>
+                                            <div class="alert alert-berkelompok alert-danger d-none" role="alert"></div>
+                                            <div class="jawaban-benar-berkelompok text-center d-none">
+                                                <span>Cara a :</span>
+                                                <p class="border border-primary p-2">
+                                                    NJ = NTT - NTP
+                                                </p>
+                                                <p>
+                                                    NTT = (<span class="batas-bawah-terakhir">BBT</span> + <span
+                                                        class="batas-atas-terakhir">BAT</span>) / 2 = <span
+                                                        class="NTT">NTT</span>
+                                                </p>
+                                                <p>
+                                                    NTP = (<span class="batas-bawah-awal">BBA</span> + <span
+                                                        class="batas-atas-awal">BAA</span>) / 2 = <span
+                                                        class="NTP">NTP</span>
+                                                </p>
+                                                <p class="font-weight-bold">
+                                                    NJ = <span class="NTT">NTT</span> - <span class="NTP">NTP</span> =
+                                                    <span class="NJ_a">NJ a</span>
+                                                </p>
+                                                <span>Cara b :</span>
+                                                <p class="border border-primary p-2">
+                                                    NJ = BAT - BBP
+                                                </p>
+                                                <p>
+                                                    BAT = <span class="batas-atas-terakhir">BAT</span> + 0.5 = <span
+                                                        class="BAT">BAT</span>
+                                                </p>
+                                                <p>
+                                                    BBP = <span class="batas-bawah-awal">BBA</span> - 0.5 = <span
+                                                        class="BBP">BBP</span>
+                                                </p>
+                                                <p class="font-weight-bold">
+                                                    NJ = <span class="BAT">BAT</span> - <span class="BBP">BBP</span> =
+                                                    <span class="NJ_b">NJ a</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#simpangan-baku" aria-expanded="true"
+                                            aria-controls="simpangan-baku">
+                                            Simpangan Baku
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="simpangan-baku" class="collapse" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Masukan Data</label>
+                                                <textarea class="form-control input-simpangan-baku"
+                                                    id="exampleFormControlTextarea1" rows="5"
+                                                    placeholder="Contoh: 1,2,3,4,5.6 (tanpa spasi)"></textarea>
+                                            </div>
+                                        </form>
+                                        <button class="btn btn-primary btn-simpangan-baku">Hasil</button>
+                                        <div class="jawaban-simpangan-baku d-none">
+                                            <hr>
+                                            <div class="alert alert-simpangan-baku alert-danger d-none" role="alert">
+                                            </div>
+                                            <div class="jawaban-benar-simpangan-baku text-center d-none">
+                                                <table id="table" class="table table-bordered text-center">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col">X</th>
+                                                            <th scope="col">f</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="d-none">
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="border border-primary p-2">
+                                                    &sigma; = &radic;(1/N (&sum;X<sub>i</sub><sup>2</sup> -
+                                                    ((&sum;X<sub>i</sub>)<sup>2</sup>) / N)
+                                                </p>
+                                                <p>
+                                                    &radic;(1/<span class="N">N</span> (<span
+                                                        class="sigma_xi_2">XI_2</span> -
+                                                    (<span class="sigma_xi__2">Xi__2</span>)<sup>2</sup> / <span
+                                                        class="N">N</span>
+                                                    )
+                                                </p>
+                                                <p>
+                                                    &radic;(1/<span class="N">N</span> (<span
+                                                        class="sigma_xi_2">XI_2</span> -
+                                                    <span class="sigmaxi__2">Xi__2</span> / <span class="N">N</span> )
+                                                </p>
+                                                <p>
+                                                    &radic;(1/<span class="N">N</span> (<span
+                                                        class="sigma_xi_2">XI_2</span> -
+                                                    <span class="sigmaxi__2_N">Xi__2_N</span> )
+                                                </p>
+                                                <p>
+                                                    &radic;(1/<span class="N">N</span> (<span
+                                                        class="sig_xi_2_N">sig_xi_2_N</span>)
+                                                </p>
+                                                <p>
+                                                    &radic;<span class="akar_sb">akar sb</span>
+                                                </p>
+                                                <p class="font-weight-bold">
+                                                    &sigma; = <span class="SB">0</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <p class="text-center">Copy Right By Wentox</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="asset/jquery/jquery-3.3.1.js"></script>
+    <script src="asset/bootstrap_4/js/popper.min.js"></script>
+    <script src="asset/bootstrap_4/js/bootstrap.min.js"></script>
+    <script src="asset/script.js"></script>
+    <script src="asset/function_rumus.js"></script>
+    <script>
+        /**
+        * RUMUS DISVERSI
+        *
+        *
+        */
+
+        $('.btn-tak-berkelompok').click(function () {
+            $('.jawaban-tak-berkelompok').removeClass('d-none');
+            let $data = $('.input-data').val(); // ambil data dari inputan
+            $data = $data.trim();
+
+            // periksa apakah ada data atau tidak
+            if (!is_data($data)) {
+                $('.jawaban-benar-tak-berkelompok').addClass('d-none');
+                $('.alert-tak-berkelompok').removeClass('d-none');
+                $('.alert-tak-berkelompok').text('Mohon masukan data!!!')
+                return;
+            }
+            // pecahkan string menjadi array dan periksa banyak data
+            $data = explode($data, ',');
+            let $banyak_data = $data.length;
+            if ($banyak_data <= 1) {
+                $('.jawaban-benar-tak-berkelompok').addClass('d-none');
+                $('.alert-tak-berkelompok').removeClass('d-none');
+                $('.alert-tak-berkelompok').text('Harap masukan lebih dari satu data!!!');
+                return;
+            }
+            // periksa kelayakan data
+            let $data_valid = data_valid($data);
+            if ($data_valid['error']) {
+                $('.jawaban-benar-tak-berkelompok').addClass('d-none');
+                $('.alert-tak-berkelompok').removeClass('d-none');
+                $('.alert-tak-berkelompok').text($data_valid['mesage']);
+                return;
+            }
+            $data = $data.sort(function (a, b) { return a - b }); //urutkan data secara ascesnding
+            $('.data').text($data); //tampilkan data pada card data
+
+            // Nilai jarak
+            let $X_satu = $data[0];
+            let $X_n = $data[$banyak_data - 1]; //nilai dari X ke-n (data ke -n)
+            let $NJ = $X_n - $X_satu;
+
+            // Rata-rata Simpangan
+            let $x_bar = rata_rata($data);
+
+            let text_xi_x_bar = "";
+            let $abs_Xi_Xbar = 0;
+            for (let i = 0; i < $banyak_data; i++) {
+
+                $abs_Xi_Xbar = $abs_Xi_Xbar + (Math.abs($data[i] - $x_bar));
+
+                if ($banyak_data - 1 != i) {
+                    text_xi_x_bar += "|" + $data[i] + ' - ' + $x_bar + '| + ';
+                }
+                else {
+                    text_xi_x_bar += "|" + $data[i] + ' - ' + $x_bar + '|';
+                }
+            }
+            let $RS = $abs_Xi_Xbar / $banyak_data;
+
+            // Simpangan terhadap Median
+            let $med = median($data);
+            let text_xi_med = "";
+            let $abs_Xi_med = 0;
+            for (let i = 0; i < $banyak_data; i++) {
+                $abs_Xi_med = $abs_Xi_med + (Math.abs($data[i] - $med));
+
+                if ($banyak_data - 1 != i) {
+                    text_xi_med += "|" + $data[i] + ' - ' + $med + '| + ';
+                }
+                else {
+                    text_xi_med += "|" + $data[i] + ' - ' + $med + '|';
+                }
+            }
+            let $RS_med = $abs_Xi_med / $banyak_data;
+
+
+            $('.Xn').text($X_n);
+            $('.x_satu').text($X_satu);
+            $('.NJ').text($NJ);
+
+            $('.n').text($banyak_data);
+            $('.X-i-min-X-bar').text(text_xi_x_bar);
+            $('.Xi-min-Xbar').text($abs_Xi_Xbar);
+            $('.RS').text($RS);
+
+            $('.X-i-min-Med').text(text_xi_med);
+            $('.Xi-min-Med').text($abs_Xi_med);
+            $('.RS-Med').text($RS_med);
+
+            $('.jawaban-benar-tak-berkelompok').removeClass('d-none');
+            $('.alert-tak-berkelompok').addClass('d-none');
+
+            // data : 50,40,30,60,70
+        });
+
+
+        // Data berkelompok
+
+        // tambah baris
+        $('.btn-add-row').click(function () {
+            tambah_baris($('#berkelompok .table'));
+        });
+        // hapus tabel
+        $('tr .x-row').on('click', function () {
+            let tr = $(this);
+            hapus_baris(tr);
+        });
+
+        $('.btn-berkelompok').click(function () {
+
+            $('.jawaban-berkelompok').removeClass('d-none');
+
+            let $f = new Array();
+            let $n = 0; // Nilai n
+            let $bool_baris = false;
+            let $bool_angka = true;
+
+            $('#berkelompok .table').find('tbody .tr').each(function (i, e) {
+                $bool_baris = true;
+                let $td = $(this).find('td');
+                let $batas_bawah = $td.eq(0).text();
+                let $batas_atas = $td.eq(1).text();
+                let $frekuensi_i = $td.eq(2).text();
+
+                $batas_bawah = $batas_bawah.trim();
+                $batas_atas = $batas_atas.trim();
+                $frekuensi_i = $frekuensi_i.trim();
+
+                if ($batas_bawah == "" || $batas_atas == "" || $frekuensi_i == "") {
+                    $bool_angka = false;
+                    return;
+                }
+
+                if (!$batas_bawah.match($number) || !$batas_atas.match($number) || !$frekuensi_i.match($number)) {
+                    $bool_angka = false;
+                    return;
+                }
+
+                $frekuensi_i = parseFloat($frekuensi_i);
+
+                $f[i] = $frekuensi_i;
+                $n = $n + $frekuensi_i;
+            });
+
+            if (!$bool_baris) {
+                $('.jawaban-benar-berkelompok').addClass('d-none');
+                $('.alert-berkelompok').removeClass('d-none');
+                $('.alert-berkelompok').text('Silahkan tambah data');
+                return;
+            }
+            if (!$bool_angka) {
+                $('.jawaban-benar-berkelompok').addClass('d-none');
+                $('.alert-berkelompok').removeClass('d-none');
+                $('.alert-berkelompok').text('Mohon masukan data dengan benar! Data tidak boleh kosong dan harus berupa angka!!!');
+                return;
+            }
+            if ($f.length <= 1) {
+                $('.jawaban-benar-berkelompok').addClass('d-none');
+                $('.alert-berkelompok').removeClass('d-none');
+                $('.alert-berkelompok').text('Mohon masukan lebih dari 1 data!!!');
+                return;
+            }
+
+            let $BBT = 0, $BAP = 0, $BAT = 0, $BBP = 0;
+            $('#berkelompok .table').find('tbody .tr').each(function (i, e) {
+                if (i == 0) {
+                    let $td = $(this).find('td');
+                    let $batas_bawah = $td.eq(0).text();
+                    let $batas_atas = $td.eq(1).text();
+                    $BBP = parseFloat($batas_bawah);
+                    $BAP = parseFloat($batas_atas);
+                }
+
+                if (i == $f.length - 1) {
+                    let $td = $(this).find('td');
+                    let $batas_bawah = $td.eq(0).text();
+                    let $batas_atas = $td.eq(1).text();
+                    $BBT = parseFloat($batas_bawah);
+                    $BAT = parseFloat($batas_atas);
+                }
+            });
+
+            // cara a
+            let $NTT = ($BBT + $BAT) / 2;
+            let $NTP = ($BBP + $BAP) / 2;
+            let $NJ_a = $NTT - $NTP;
+
+            // cara b
+            let $TAT = $BAT + 0.5;
+            let $TBP = $BBP - 0.5;
+            let $NJ_b = $TAT - $TBP;
+
+            // print out
+            $('.batas-bawah-terakhir').text($BBT);
+            $('.batas-atas-terakhir').text($BAT);
+            $('.NTT').text($NTT);
+            $('.batas-bawah-awal').text($BBP);
+            $('.batas-atas-awal').text($BAP);
+            $('.NTP').text($NTP);
+            $('.NJ_a').text($NJ_a);
+
+            $('.BAT').text($TAT);
+            $('.BBP').text($TBP);
+            $('.NJ_b').text($NJ_b);
+
+
+            $('.jawaban-benar-berkelompok').removeClass('d-none');
+            $('.alert-berkelompok').addClass('d-none');
+
+        });
+
+        // simpangan baku 100,40,80,20,10,50
+        $('.btn-simpangan-baku').click(function () {
+            $('.jawaban-benar-simpangan-baku .tr').remove();
+            $('.jawaban-simpangan-baku').removeClass('d-none');
+            let $data = $('.input-simpangan-baku').val(); // ambil data dari inputan
+            $data = $data.trim();
+
+            // periksa apakah ada data atau tidak
+            if (!is_data($data)) {
+                $('.jawaban-benar-simpangan-baku').addClass('d-none');
+                $('.alert-simpangan-baku').removeClass('d-none');
+                $('.alert-simpangan-baku').text('Mohon masukan data!!!')
+                return;
+            }
+            // pecahkan string menjadi array dan periksa banyak data
+            $data = explode($data, ',');
+            let $banyak_data = $data.length;
+            if ($banyak_data <= 1) {
+                $('.jawaban-benar-simpangan-baku').addClass('d-none');
+                $('.alert-simpangan-baku').removeClass('d-none');
+                $('.alert-simpangan-baku').text('Harap masukan lebih dari satu data!!!');
+                return;
+            }
+            // periksa kelayakan data
+            let $data_valid = data_valid($data);
+            if ($data_valid['error']) {
+                $('.jawaban-benar-simpangan-baku').addClass('d-none');
+                $('.alert-simpangan-baku').removeClass('d-none');
+                $('.alert-simpangan-baku').text($data_valid['mesage']);
+                return;
+            }
+            let $pangkat_data = new Array();
+            let $sigma_X = 0;
+            for (let i = 0; i < $banyak_data; i++) {
+                $pangkat_data[i] = Math.pow($data[i], 2);
+                $sigma_X = $sigma_X + parseFloat($data[i]);
+            }
+
+
+            let $sigma_X2 = $pangkat_data.reduce((a, b) => a + b);
+
+            // tabel
+            for (let i = 0; i < $banyak_data + 1; i++) {
+                tambah_baris($('.jawaban-benar-simpangan-baku .table'));
+            }
+
+            $('.jawaban-benar-simpangan-baku .table').find('.tr').each(function (i) {
+                $td = $(this).find('td');
+                $td.eq(0).text($data[i]);
+                $td.eq(1).text($pangkat_data[i]);
+                if (i == $banyak_data) {
+                    $td.eq(0).html("&sum;X<sub>i</sub> = " + $sigma_X);
+                    $td.eq(1).html("(&sum;X<sub>i</sub>)<sup>2</sup> = " + $sigma_X2);
+                    $(this).addClass('alert-success');
+                }
+            });
+
+            let $sigma_x_kuadrat = Math.pow($sigma_X, 2);
+            let $sigma_x_kuadrat_per_n = $sigma_x_kuadrat / $banyak_data;
+            let $sig_xi_2_N = $sigma_X2 - $sigma_x_kuadrat_per_n;
+            let $akar = $sig_xi_2_N / $banyak_data;
+            let $SB = Math.sqrt($akar);
+
+            $('.N').text($banyak_data);
+            $('.sigma_xi_2').text($sigma_X2);
+            $('.sigma_xi__2').text($sigma_X);
+            $('.sigmaxi__2').text($sigma_x_kuadrat);
+            $('.sigmaxi__2_N').text($sigma_x_kuadrat_per_n);
+            $('.sig_xi_2_N').text($sig_xi_2_N);
+            $('.akar_sb').text($akar);
+            $('.SB').text($SB);
+
+            $('.jawaban-benar-simpangan-baku').removeClass('d-none');
+            $('.alert-simpangan-baku').addClass('d-none');
+        });
+
+        /*
+        *Math.max.apply(Math,a);
+        */
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+    1,2,2,3,3,3,4,4,4,4,5,5,5,5,5
+    
+    80,66,74,70,71,74,71,73,72,75,71,70,74,79,76,67,66,69,74,75,72,75,72,72,78,74,72,74,80,74,77,75,73,73,73,79,78,74,70,68
+    
+    
+    
+    79,49,48,74,81,98,87,80,
+    80,84,90,70,91,93,82,78,
+    70,71,92,38,56,81,74,73,
+    68,72,85,51,65,93,83,86,
+    90,35,83,73,74,43,86,88,
+    92,93,76,71,90,72,67,75,
+    80,91,61,72,97,91,88,81,
+    70,74,99,95,80,59,71,77,
+    63,60,83,82,60,67,89,63,
+    76,63,88,70,66,88,79,75
+    
+    
+    146,147,147,148,149,156,157,161,163,164,119,125,128,132,135,138,140,142,142,144
+    
+    146,147,147,148,149,150,150,152,153,154,
+    156,157,158,161,163,164,165,168,173,176,
+    119,125,126,128,132,135,135,135,136,138,
+    138,140,140,142,142,144,144,145,145,146
+    
+    146,147,147,148,149,150,150,152,153,154,156,157,158,161,163,164,165,168,173,176,119,125,126,128,132,135,135,135,136,138,138,140,140,142,142,144,144,145,145,146
+-->

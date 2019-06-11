@@ -24,17 +24,54 @@ function rata_rata_hitung(input, alert, sig, N_n, hasil, kotak_jawaban, jawaban,
     $(alert).addClass('d-none');
     $(jawaban).removeClass('d-none');
     let banyak_data = data.length;
-    let total = 0;
+    let total = sigma_x(data);
 
-    for (let i = 0; i < data.length; i++) {
-        total = total + (parseFloat(data[i]));
-    }
+    // for (let i = 0; i < data.length; i++) {
+    //     total = total + (parseFloat(data[i]));
+    // }
 
-    let hasil_jawaban = total / banyak_data;
+    let hasil_jawaban = rata_rata(data);
+
     $(sig).text(total);
     $(N_n).text(banyak_data);
     $(hasil).html('Jawaban : ' + simbol + " = " + (hasil_jawaban));
 }
+
+function n($data) {
+
+}
+
+function sigma_x($data) {
+    let $total = 0;
+    for (let i = 0; i < $data.length; i++) {
+        $total = $total + (parseFloat($data[i]));
+    }
+    return $total;
+}
+
+function rata_rata($data) {
+    let $total = sigma_x($data);
+    let $banyak_data = $data.length;
+    return $total / $banyak_data;
+}
+
+function median($data) {
+    let $panjang_data = $data.length;
+    if ($panjang_data % 2 == 0) {
+        // genap
+        let $K = ($panjang_data / 2) - 1;
+        return (parseFloat($data[$K]) + parseFloat($data[$K + 1])) / 2;
+
+    }
+    else {
+        // ganjil
+        let $K = ($data.length - 1) / 2;
+        let $med = $K + 1;
+        let $MED = $med - 1;
+        return $data[$MED];
+    }
+}
+
 
 
 // function tambah baris

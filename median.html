@@ -13,11 +13,6 @@
 
     <title>Aplikasi Statistik | Owen Wattimena</title>
 
-
-    <!-- <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script> -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML'
-        async></script>
-
 </head>
 
 <body>
@@ -49,6 +44,9 @@
                     </a>
                     <a href="modus.html" class="list-group-item list-group-item-action">
                         Modus
+                    </a>
+                    <a href="disversi.html" class="list-group-item list-group-item-action">
+                        Disversi
                     </a>
                 </div>
             </div>
@@ -334,15 +332,16 @@
                     return;
                 }
 
-                let $data_valid = data_valid($data);
+                let $data_valid = data_valid($data); //periksa kelayakan data
                 if ($data_valid['error']) {
                     $('.jawaban-benar-tak-berkelompok').addClass('d-none');
                     $('.alert-tak-berkelompok').removeClass('d-none');
                     $('.alert-tak-berkelompok').text($data_valid['mesage']);
                     return;
                 }
-                $data = $data.sort(function (a, b) { return a - b });
-                $('.data').text($data);
+
+                $data = $data.sort(function (a, b) { return a - b }); //urutkan data secara ascesnding
+                $('.data').text($data); //tampilkan data pada card data
 
 
                 if ($banyak_data % 2 != 0) {
