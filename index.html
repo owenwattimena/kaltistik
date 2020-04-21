@@ -1,3 +1,11 @@
+<!-- 
+
+    Aplikasi Kaltistik V2
+    @author : Owen Wattimena
+    @website : https://owenwattimena.github.io
+
+ -->
+
 <!doctype html>
 <html lang="en">
 
@@ -9,35 +17,178 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="asset/bootstrap_4/css/bootstrap.min.css">
     <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="asset/fontawesome-free-5.7.1-web/css/all.css">
 
     <title>Selamat datang di Aplikasi Statistik</title>
+
+    <style>
+        .fade-enter-active,
+        .fade-leave-active {
+            transition: opacity .5s;
+        }
+
+        .fade-enter,
+        .fade-leave-to {
+            opacity: 0;
+        }
+    </style>
+
 </head>
 
 <body>
-    <div class="landing px-2">
-        <div class="container text-center font-primary-dark">
-            <img src="asset/img/statistik.png" alt="" class="py-5 px-2">
-            <h1>Selamat Datang di Aplikasi KalTistik</h1>
-            <p class="description">
-                Kalkulator Statistik berdasarkan mata kuliah Statistika dan Probabilitas</br>
-                Program studi Teknik Informatika</br>
-                Jurusan Teknik Elektro</br>
-                Politeknik Negeri Ambon</br>
-                2019
-            </p>
-            <a href="rata-rata-hitung.html" class="btn btn-primary px-5 my-5">MULAI</a>
+    <div id="app">
+        <landing v-show="isLanding" @click="isLanding = $event"></landing>
 
-            <footer>
-                <p>Copy Right By Wentox</p>
-            </footer>
+        <div v-show="!isLanding" class="body">
+            <side-bar></side-bar>
+            <div class="content">
+                <transition name="slide" mode="out-in">
+                    <router-view></router-view>
+                </transition>
+                <footer_ official_website="https://owenwattimena.github.io"></footer_>
+            </div>
         </div>
-    </div>
 
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="asset/jquery/jquery-3.3.1.js"></script>
+    <script src=" asset/jquery/jquery-3.3.1.js"></script>
     <script src="asset/bootstrap_4/js/popper.min.js"></script>
     <script src="asset/bootstrap_4/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.1.3/vue-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.2.0/vuex.min.js"></script>
+    <script src="asset/script.js"></script>
+    <script src="asset/function_rumus.js"></script>
+
+    <script type="module">
+        import { Landing } from './components/Landing.js'
+        import { SideBar } from './components/SideBar.js'
+        import { RerataHitung } from './components/RerataHitung.js'
+        import { TabelDistribusi } from './components/TabelDistribusi.js'
+        import { Median } from './components/Median.js'
+        import { Modus } from './components/Modus.js'
+        import { Disversi } from './components/Disversi.js'
+        import { KoefisienRelasi } from './components/KoefisienRelasi.js'
+        import { Footer } from './components/Footer.js'
+
+
+
+        // const routes = [
+        //     {
+        //         path: '/',
+        //         component: RerataHitung,
+        //         alias: '/rata-rata-hitung',
+        //     },
+        //     {
+        //         path: '/tabel-distribusi-frekuensi',
+        //         component: TabelDistribusi,
+        //     },
+        //     {
+        //         path: '/median',
+        //         component: Median,
+        //     },
+        //     {
+        //         path: '/modus',
+        //         component: Modus,
+        //     },
+        //     {
+        //         path: '*',
+        //         redirect: '/',
+        //     }
+        // ]
+
+        // const router = new VueRouter({
+        //     // mode: 'history',
+        //     routes: [
+        //         {
+        //             path: '/',
+        //             component: RerataHitung,
+        //             alias: '/rata-rata-hitung',
+        //             meta: { login: true }
+        //         },
+        //         {
+        //             path: '/tabel-distribusi-frekuensi',
+        //             component: TabelDistribusi,
+        //         },
+        //         {
+        //             path: '/median',
+        //             component: Median,
+        //         },
+        //         {
+        //             path: '/modus',
+        //             component: Modus,
+        //         },
+        //         {
+        //             path: '*',
+        //             redirect: '/',
+        //         }
+        //     ],
+        //     linkActiveClass: 'active',
+        // })
+
+
+
+        let vm = new Vue({
+            el: '#app',
+            components: {
+                'landing': Landing,
+                'side-bar': SideBar,
+                'footer_': Footer,
+            },
+            computed: {
+                isLoged() {
+                    return store.state.isLoged
+                }
+            },
+            methods: {
+                setLoged() {
+                    store.commit('setLoged')
+                }
+            },
+            router: new VueRouter({
+                mode: 'history',
+                routes: [
+                    {
+                        path: '/',
+                        component: RerataHitung,
+                        alias: '/rata-rata-hitung',
+                    },
+                    {
+                        path: '/tabel-distribusi-frekuensi',
+                        component: TabelDistribusi,
+                    },
+                    {
+                        path: '/median',
+                        component: Median,
+                    },
+                    {
+                        path: '/modus',
+                        component: Modus,
+                    },
+                    {
+                        path: '/disversi',
+                        component: Disversi,
+                    },
+                    {
+                        path: '/koefisien-relasi',
+                        component: KoefisienRelasi,
+                    },
+                    {
+                        path: '*',
+                        redirect: '/',
+                    }
+                ],
+                linkActiveClass: 'active',
+            }),
+            data: {
+                isLanding: true,
+            }
+
+        })
+
+    </script>
+
 </body>
 
 </html>

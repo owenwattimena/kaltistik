@@ -1,32 +1,27 @@
 @font-face {
     font-family: SegoeUI;
-    src:
-        local("Segoe UI"),
-        url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff");
+    src: local("Segoe UI"), url(//c.s-microsoft.com/static/fonts/segoe-ui/west-european/normal/latest.woff) format("woff");
     font-weight: 400;
 }
 
 @font-face {
-	font-family: 'BAUHS93';
-	src: url('font/BAUHS93.eot');
-	src: local('BAUHS93'), url('font/BAUHS93.woff') format('woff'), url('font/BAUHS93.ttf') format('truetype');
+    font-family: 'BAUHS93';
+    src: url('font/BAUHS93.eot');
+    src: local('BAUHS93'), url('font/BAUHS93.woff') format('woff'), url('font/BAUHS93.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'CENTAUR';
-	src: url('font/centaur/CENTAUR.eot');
-	src: local('CENTAUR'), url('font/centaur/CENTAUR.woff') format('woff'), url('font/centaur/CENTAUR.ttf') format('truetype');
+    font-family: 'CENTAUR';
+    src: url('font/centaur/CENTAUR.eot');
+    src: local('CENTAUR'), url('font/centaur/CENTAUR.woff') format('woff'), url('font/centaur/CENTAUR.ttf') format('truetype');
 }
-
 
 /* my Costum */
 
-html,
-body {
+html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
 }
-
 
 .font-primary-dark {
     color: #48813A;
@@ -46,39 +41,35 @@ body {
     border: 2px solid #BFE72C;
 }
 
-
 /* end of my Costum */
-
 
 /* index CSS */
 
-.landing {
+#app .landing {
     width: 100%;
     height: 100%;
 }
 
-.landing img {
+#app .landing img {
     width: 200px;
 }
 
-.landing h1,
-.side-nav-header h3 {
+#app .landing h1, #app .side-nav-header h3 {
     font-family: 'BAUHS93', Courier, monospace;
 }
 
-.landing .description {
+#app .landing .description {
     font-family: 'CENTAUR', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.landing .btn {
+#app .landing .btn {
     border-radius: 100px;
 }
 
-.landing footer{
+#app .landing footer {
     color: #48813A;
     font-weight: bold;
 }
-
 
 /* responsive panding img */
 
@@ -94,28 +85,29 @@ body {
     }
 }
 
-
 /* end of responsive panding img */
-
 
 /* end of index CSS */
 
-
 /* template */
 
-.body{
+#app {
+    height: 100%;
+}
+
+.body {
     position: relative;
     width: 100%;
-    min-height: 100%!important;
+    min-height: 100%;
 }
 
 /* side-nav */
 
-.side-nav {
+#app .body .side-nav {
     position: absolute;
     background-color: #95C01E;
     transform: translateX(-100%);
-    min-height: 100%;
+    height: auto;
     transition: 1s;
     z-index: 1000;
 }
@@ -124,11 +116,13 @@ body {
     background-color: #F0F1F1;
     /* border: 1px solid red; */
 }
-.side-nav-header a{
+
+.side-nav-header a {
     text-decoration: none;
     color: #48813A;
 }
-.side-nav-header a:hover{
+
+.side-nav-header a:hover {
     color: #95C01E;
 }
 
@@ -172,12 +166,12 @@ body {
     border-radius: 100px;
 }
 
-.side-nav-content {
+#app .body .side-nav-content {
     background-color: #95C01E;
     height: auto;
 }
 
-.side-nav-content p, .side-nav-content .separator{
+.side-nav-content p, .side-nav-content .separator {
     display: none;
 }
 
@@ -199,20 +193,17 @@ body {
     margin-right: auto;
 }
 
-
 /* end of side-nav */
-
 
 /* content */
 
-.content {
+#app .body .content {
     position: absolute;
     width: 100%;
     min-height: 100%;
     top: 0;
     /* transition:1s;  */
 }
-
 
 /* top-nav */
 
@@ -256,40 +247,42 @@ body {
     text-overflow: ellipsis;
 }
 
-
 /* end of top-nav */
 
 /* accordion */
-.body .accordion .card-header .btn{
+
+.body .accordion .card-header .btn {
     color: #6C6D70;
     text-decoration: none;
     transition: 1s;
 }
-.body .accordion .card-header .btn:hover{
+
+.body .accordion .card-header .btn:hover {
     color: rgb(43, 43, 44);
     font-size: 12.5pt;
 }
+
 /* accordion */
 
 /* footer */
-.body footer{
+
+.body footer {
     margin-top: 15px;
     color: #48813A;
     font-weight: bold
 }
+
 /* end of footer */
 
 /* end of content */
 
-.open {
+#app .body .open {
     transform: translateX(0);
 }
-
 
 /* responsive */
 
 @media only screen and (min-width: 700px) {
-
     html {
         overflow: hidden;
     }
@@ -298,19 +291,18 @@ body {
         height: 100%;
         overflow: auto;
     }
-    .body {
+    #app .body {
         display: flex;
-        height: auto;
+        min-height: 100%;
     }
-    .side-nav {
+    #app .body .side-nav {
         position: relative;
         transform: translateX(0);
         width: 25%;
         border: 1px solid #95C01E;
         height: auto;
     }
-    
-    .content {
+    #app .body .content {
         position: relative;
         width: 75%;
         height: auto;
@@ -318,18 +310,14 @@ body {
     .content .top-nav {
         border-left: none;
     }
-    #show-menu,
-    #hide-menu {
+    #show-menu, #hide-menu {
         display: none;
     }
 }
 
-
 /* end of responsive */
 
-
 /* end of template */
-
 
 /* container */
 
@@ -337,23 +325,19 @@ body {
     border-bottom: 1px solid #dddddd;
 }
 
-.x-row,
-.x-row-interval {
+.x-row, .x-row-interval {
     color: red;
 }
 
-.x-row:hover,
-.x-row-interval:hover {
+.x-row:hover, .x-row-interval:hover {
     cursor: pointer;
 }
-
 
 @media only screen and (min-width: 768px) {
     .jawaban-benar-distribusi-frekuensi .row .card {
         height: 462px;
     }
-    .jawaban-benar-distribusi-frekuensi .row .card-data,
-    .jawaban-benar-distribusi-frekuensi .row .card-tabel-distribusi {
+    .jawaban-benar-distribusi-frekuensi .row .card-data, .jawaban-benar-distribusi-frekuensi .row .card-tabel-distribusi {
         height: auto;
     }
 }
@@ -361,6 +345,5 @@ body {
 .data-distribusi-f {
     word-wrap: break-word;
 }
-
 
 /* end of container *
